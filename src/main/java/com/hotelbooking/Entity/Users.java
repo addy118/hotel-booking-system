@@ -25,6 +25,6 @@ public class Users {
 	
 	private String address;
 	
-	private Integer phoneNumber;
+	private String phoneNumber;
 
 }
