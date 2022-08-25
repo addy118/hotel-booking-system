@@ -47,9 +47,7 @@ public class HotelServiceImpl implements HotelService {
 			if (hotel.getPhoneNumber().isEmpty()) {
 				updateHotelEntity.setPhoneNumber(hotel.getPhoneNumber());
 			}
-			if (hotel.getNoOfRooms() == 0) {
-				updateHotelEntity.setNoOfRooms(hotel.getNoOfRooms());
-			}
+			updateHotelEntity.setNoOfRooms(hotel.getNoOfRooms());
 			updateHotelEntity.setRoomAvailableFromDate(hotel.getRoomAvailableFromDate());
 			updateHotelEntity.setRoomAvailableToDate(hotel.getRoomAvailableToDate());
 
