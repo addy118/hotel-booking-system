@@ -14,4 +14,6 @@ public interface HotelsRepository extends JpaRepository<Hotels, Integer>{
 
 	Hotels findByHotelName(String hotelName);
 
+	List<Hotels> findAllOrderByOverAllRatingsDesc();
+
 }

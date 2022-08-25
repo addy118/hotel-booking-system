@@ -69,7 +69,7 @@ public class HotelServiceImpl implements HotelService {
 
 	@Override
 	public List<Hotels> getAllHotelDetails() {
-		return hotelRepo.findAll();
+		return hotelRepo.findAllOrderByOverAllRatingsDesc();
 	}
 
 	@Override
