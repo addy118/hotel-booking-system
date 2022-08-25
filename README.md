@@ -21,19 +21,30 @@ Database Name : sql6514878
 Username : sql6514878
 Password : jLged4IW2y
 
-Running the application locally:
+Steps to Setup:
+1. Clone the application
+https://github.com/JegaMax/AloreHotelBooking-Api.git
 
-There are several ways to run a Spring Boot application on your local machine. One way is to execute the main method in the com.hotelbooking.HotelBookingApplication class from your IDE.
+2. Create Mysql database
+create database database_name
 
-Alternatively you can use the Spring Boot Maven plugin like so:
+3. Change mysql host, username, password and database as per your mysql DB confiqurations
+
+open src/main/resources/application.properties
+
+change following details
+spring.datasource.url
+spring.datasource.username
+spring.datasource.password
+
+4. Build and run the app using maven
+
+mvn package
+java -jar target/hotelbooking-0.0.1-SNAPSHOT.jar
+Alternatively, you can run the app without packaging it using -
 
 mvn spring-boot:run
-
-Build an executable JAR:
-
-You can run the application from the command line with Maven. Or you can build a single executable JAR file that contains all the necessary dependencies, classes, and resources, and run that. This makes it easy to ship, version, and deploy the service as an application throughout the development lifecycle, across different environments, and so forth.
-
-If you are using Maven, you can run the application using ./mvnw spring-boot:run. Or you can build the JAR file with ./mvnw clean package. Then you can run the JAR file:
+The app will start running at http://localhost:8080.
 
 java -jar target/hotelbooking-0.0.1-SNAPSHOT.jar The procedure above will create a runnable JAR. You can also opt to build a classic WAR file instead. Logging output is displayed. The service should be up and running within a few seconds.
 
@@ -41,3 +52,58 @@ Test the application:
 
 Now that the application is running, you can test it.
 Either use postman tool or use sawgger ui for testing purpose.
+
+Explore Rest APIs
+This springboot app defines following CRUD APIs.
+user-controller:
+POST
+/api/users/add
+Create a new User
+
+PATCH
+/api/users/update/{userId}
+Update a user by userId
+
+GET
+/api/users/{userId}
+Get user details by userId
+
+DELETE
+/api/users/delete/{userId}
+Delete a User by userId
+review-controller
+
+
+POST
+/api/reviews/add
+Create a new review for Hotel
+
+PATCH
+/api/reviews/update/{reviewId}
+Update a review by reviewId
+
+DELETE
+/api/reviews/delete/{reviewId}
+Delete a review by reviewId
+hotel-controller
+
+
+POST
+/api/hotels/add
+Create a new Hotel
+
+PATCH
+/api/hotels/update/{hotelId}
+Update a hotel by it's id
+
+GET
+/api/hotels
+Get list of hotels (Ordered by rating in ascending order)
+
+GET
+/api/hotels/{cityName}
+Get list of hotels (Ordered by rating in ascending order)
+
+DELETE
+/api/hotels/delete/{hotelId}
+Delete a Hotel by its id
