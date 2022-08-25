@@ -56,54 +56,54 @@ Either use postman tool or use sawgger ui for testing purpose.
 Explore Rest APIs
 This springboot app defines following CRUD APIs.
 user-controller:
-POST
+• POST
 /api/users/add
 Create a new User
 
-PATCH
+• PATCH
 /api/users/update/{userId}
 Update a user by userId
 
-GET
+• GET
 /api/users/{userId}
 Get user details by userId
 
-DELETE
+• DELETE
 /api/users/delete/{userId}
 Delete a User by userId
 review-controller
 
 
-POST
+• POST
 /api/reviews/add
 Create a new review for Hotel
 
-PATCH
+• PATCH
 /api/reviews/update/{reviewId}
 Update a review by reviewId
 
-DELETE
+• DELETE
 /api/reviews/delete/{reviewId}
 Delete a review by reviewId
 hotel-controller
 
 
-POST
+• POST
 /api/hotels/add
 Create a new Hotel
 
-PATCH
+• PATCH
 /api/hotels/update/{hotelId}
 Update a hotel by it's id
 
-GET
+• GET
 /api/hotels
 Get list of hotels (Ordered by rating in ascending order)
 
-GET
+• GET
 /api/hotels/{cityName}
 Get list of hotels (Ordered by rating in ascending order)
 
-DELETE
+• DELETE
 /api/hotels/delete/{hotelId}
 Delete a Hotel by its id
