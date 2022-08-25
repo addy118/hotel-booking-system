@@ -36,7 +36,7 @@ public class ReviewServiceImpl implements ReviewService {
 		Optional<Reviews> reviewEntity = reviewsRepo.findById(reviewId);
 		Hotels hotelEntity = hotelRepo.findByHotelName(review.getHotelName());
 		// Check if the user exists
-		if (reviewEntity.isPresent()) {
+		if (reviewEntity.isPresent() && hotelEntity != null) {
 			Reviews updateReviewEntity = reviewEntity.get();
 			if (review.getReviewerName().isEmpty()) {
 				updateReviewEntity.setReviewerName(review.getReviewerName());
