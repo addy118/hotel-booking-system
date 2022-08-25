@@ -58,35 +58,35 @@ This springboot app defines following CRUD APIs.
 user-controller:
 • POST
 /api/users/add
-Create a new User
+ -Create a new User
 
 • PATCH
 /api/users/update/{userId}
-Update a user by userId
+ -Update a user by userId
 
 • GET
 /api/users/{userId}
-Get user details by userId
+ -Get user details by userId
 
 • DELETE
 /api/users/delete/{userId}
-Delete a User by userId
-review-controller
+ -Delete a User by userId
 
+review-controller:
 
 • POST
 /api/reviews/add
-Create a new review for Hotel
+ -Create a new review for Hotel
 
 • PATCH
 /api/reviews/update/{reviewId}
-Update a review by reviewId
+ -Update a review by reviewId
 
 • DELETE
 /api/reviews/delete/{reviewId}
-Delete a review by reviewId
-hotel-controller
+- Delete a review by reviewId
 
+hotel-controller:
 
 • POST
 /api/hotels/add
@@ -94,16 +94,16 @@ Create a new Hotel
 
 • PATCH
 /api/hotels/update/{hotelId}
-Update a hotel by it's id
+ -Update a hotel by it's id
 
 • GET
 /api/hotels
-Get list of hotels (Ordered by rating in ascending order)
+ -Get list of hotels (Ordered by rating in ascending order)
 
 • GET
 /api/hotels/{cityName}
-Get list of hotels (Ordered by rating in ascending order)
+ -Get list of hotels (Ordered by rating in ascending order)
 
 • DELETE
 /api/hotels/delete/{hotelId}
-Delete a Hotel by its id
+ -Delete a Hotel by its id
