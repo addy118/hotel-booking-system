@@ -14,7 +14,15 @@ Demo Application was Deployed in Heroku server for Testing purpose and Swagger3 
 
 Link: https://alore-hotelbooking.herokuapp.com/swagger-ui/index.html
 
+Use the below credentials for DB verification:
+
+Database Host : sql6.freesqldatabase.com
+Database Name : sql6514878
+Username : sql6514878
+Password : jLged4IW2y
+
 Running the application locally:
+
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the main method in the com.hotelbooking.HotelBookingApplication class from your IDE.
 
 Alternatively you can use the Spring Boot Maven plugin like so:
